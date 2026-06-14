@@ -1,0 +1,72 @@
+// Zoho Deluge Syntax Test Script
+/*
+ * comment block is here
+ */
+
+// Basic Variables and Data Types
+name = "Gemini";
+age = 25;
+price = 99.99;
+is_active = true;
+nothing = null;
+current_time = zoho.currenttime;
+
+// Control Statements
+if (age > 18) {
+    info "Adult";
+} else if (age <= 12) {
+    info "Child";
+} else {
+    alert "Teenager";
+}
+
+// Loops
+my_list = {1, 2, 3, 4, 5};
+for each val in my_list {
+    if (val % 2 == 0) {
+        info val + " is even";
+    }
+}
+
+// Advanced Types
+my_map = Map();
+my_map.put("key1", "value1");
+my_map.put("key2", 100);
+val = my_map.get("key1");
+
+// Special Commands
+cancel submit;
+info "Submission cancelled";
+
+// Built-in functions
+product = "Zoho Creator";
+product.contains("Creator");         // returns true
+product.contains("Creator ".trim()); // returns true
+
+// Integration Syntax (invokeUrl, invokeapi, ftp, sftp)
+res = invokeUrl [
+    url: "https://api.example.com/v1/data"
+    type: POST
+    headers: {"Authorization": "Bearer token", "Content-Type": "application/json"}
+    parameters: {"param1": "val1"}
+    body: {"key": "value"}.toString()
+    connection: "my_connection"
+    detailed: true
+    response-format: JSON
+    response-decoding: "UTF-8"
+];
+
+api_res = invokeapi [
+    url: "https://api.example.com"
+    type: PUT
+];
+
+
+// Date Manipulation
+future_date = zoho.currentdate.addBusinessDay(5);
+info "Future date: " + future_date;
+
+// String and Number operations
+s = "Hello" + " World";
+n = (10 * 5) / 2;
+boolean_check = (true && false) || !false;
