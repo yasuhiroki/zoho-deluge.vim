@@ -21,7 +21,7 @@ syn match delugeConstant "\<\(GET\|POST\|PUT\|DELETE\|PATCH\|HEAD\|OPTIONS\|JSON
 syn keyword delugeCommand alert info cancel submit
 
 " Built-in functions and objects
-syn keyword delugeBuiltin list map date datetime string int decimal bool bigint long float
+syn keyword delugeBuiltin input list map date datetime string int decimal bool bigint long float
 syn match delugeBuiltin "\<zoho\.[a-zA-Z0-9._]\+\>"
 
 " Functions
