@@ -10,7 +10,7 @@ endif
 syn case ignore
 
 " Keywords
-syn keyword delugeKeyword if else while return break continue in void
+syn keyword delugeKeyword if else while return break continue in void throws
 syn keyword delugeKeyword update insert delete into from fetch
 syn match delugeKeyword "\<else\s\+if\>"
 syn match delugeKeyword "\<for\s\+each\>"
