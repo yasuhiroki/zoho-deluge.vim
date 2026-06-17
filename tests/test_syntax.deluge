@@ -70,3 +70,14 @@ info "Future date: " + future_date;
 s = "Hello" + " World";
 n = (10 * 5) / 2;
 boolean_check = (true && false) || !false;
+
+try {
+    products = {"Creator","CRM","Cliq"};
+    products = products.get(10);
+    products.add("Sheet");
+} catch(e) {
+    info e.lineNo; // Displays line number of the statement that caused the error
+    info e.message; // Displays the error message
+    info e; // Displays both line number and error message
+}
+
