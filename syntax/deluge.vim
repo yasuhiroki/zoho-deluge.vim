@@ -50,7 +50,7 @@ let s:integration_keywords = 'invokeUrl\|invokeapi\|ftp\|sftp'
 execute 'syn region delugeIntegration start="\<\(' . s:integration_keywords . '\)\ze\s*\[" end="\]" contains=delugeIntegrationKey,delugeString,delugeNumber,delugeComment,delugeConstant,delugeDelimiter,delugeBuiltin,delugeFunction'
 execute 'syn match delugeIntegrationCommand "\<\(' . s:integration_keywords . '\)\>" containedin=delugeIntegration'
 syn match delugeIntegrationBracket "\[\|\]" containedin=delugeIntegration
-syn match delugeIntegrationKey "[a-zA-Z0-9-]\+\ze:" containedin=delugeIntegration
+syn match delugeIntegrationKey "[a-zA-Z0-9- ]\+\ze:" containedin=delugeIntegration
 
 " Highlighting
 hi def link delugeKeyword Keyword
