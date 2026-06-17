@@ -10,7 +10,7 @@ endif
 syn case ignore
 
 " Keywords
-syn keyword delugeKeyword if else while return break continue in void throws try catch
+syn keyword delugeKeyword if else while return break continue in throws try catch
 syn keyword delugeKeyword update insert delete into from fetch
 syn match delugeKeyword "\<else\s\+if\>"
 syn match delugeKeyword "\<for\s\+each\>"
@@ -21,7 +21,7 @@ syn match delugeConstant "\<\(GET\|POST\|PUT\|DELETE\|PATCH\|HEAD\|OPTIONS\|JSON
 syn keyword delugeCommand alert info cancel submit
 
 " Built-in functions and objects
-syn keyword delugeBuiltin input list map date datetime string int decimal bool bigint long float
+syn keyword delugeBuiltinType void input list map date datetime string int decimal bool bigint long float
 syn match delugeBuiltin "\<zoho\.[a-zA-Z0-9._]\+\>"
 
 " Functions
@@ -58,6 +58,7 @@ hi def link delugeBoolean Boolean
 hi def link delugeNull Constant
 hi def link delugeConstant Constant
 hi def link delugeCommand Statement
+hi def link delugeBuiltinType Type
 hi def link delugeBuiltin Function
 hi def link delugeFunction Function
 hi def link delugeComment Comment

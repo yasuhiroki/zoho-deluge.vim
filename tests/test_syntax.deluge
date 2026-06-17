@@ -81,3 +81,5 @@ try {
     info e; // Displays both line number and error message
 }
 
+void function sample(string foo, int bar) {
+}
